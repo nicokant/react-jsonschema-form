@@ -77,19 +77,14 @@ For dynamic theme switching, you can change the data-theme attribute in your app
 
 Make sure your `tailwind.config.js` includes the DaisyUI plugin:
 
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [require('daisyui')],
-  daisyui: {
-    themes: true,
-  },
-};
+```css
+@import "tailwindcss";
+@source "../node_modules/@rjsf/daisyui";
+@plugin "daisyui" {
+  themes: all;
+}
 ```
+
 
 ## Customization
 
